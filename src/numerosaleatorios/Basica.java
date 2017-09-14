@@ -111,12 +111,13 @@ public class Basica extends javax.swing.JFrame {
         int n=0;
         x[0]=Double.parseDouble(this.jTextField1.getText());
         while (n < Integer.parseInt(this.jTextField2.getText())-1) {
-            System.out.println("lo que vale n: "+n+" es x :"+x[n]);
             n = n+1;
             x[n]=funcionTransicion(x[n-1],this.jTextField3.getText());
             u[n-1]=functionSalida(x[n],this.jTextField4.getText());
         }
-        System.out.println(Arrays.toString(x) + "\n"+ Arrays.toString(u));
+        System.out.println(Arrays.toString(x)+"\n"+Arrays.toString(u));
+        //resultadoAleatorio resultado = new resultadoAleatorio(x,u);
+        //resultado.setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_generarAleatorios
 
     private static double funcionTransicion(double n,String cadena){
